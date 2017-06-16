@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Party</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ 
+
+
+ <ion-list>
+    <ion-item>
+      <ion-label floating >Party Name</ion-label>
+      <ion-input [(ngModel)]="name"  type="text" clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating >Party Description</ion-label>
+      <ion-textarea [(ngModel)]="description"   type="text" clearInput></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button  ion-button (click)="addParty()" block>Add</button>
+
+  
+</ion-content>

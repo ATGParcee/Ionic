@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+          
+     <ion-title>Party </ion-title>
+     <button ion-button color="dark" outline icon-only style="float:right" (click)="mode = 'addParty'">
+       <ion-icon name="add"></ion-icon>
+     </button>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<div *ngIf="mode == 'main'">
+   <ion-item *ngFor="let P of Parties | async">
+     aaa
+   </ion-item>
+
+</div>
+  <div class="form" *ngIf="mode == 'addParty'">
+    <ion-list>
+    <ion-item no-lines>
+        <ion-label floating>Party Name</ion-label>
+        <ion-input type="text" [(ngModel)]="Party.PartyName"></ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label floating>Party Description</ion-label>
+        <ion-textarea  [(ngModel)]="Party.PartyDescription"></ion-textarea>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label floating>Party Time</ion-label>
+        <ion-datetime type="text" [(ngModel)]="Party.PartyTime"></ion-datetime>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label floating>Party Location</ion-label>
+        <ion-input type="text" [(ngModel)]="Party.PartyLocation"></ion-input>
+      </ion-item>
+  </ion-list>
+<button ion-button tappable (click)="addParty()">Add Party</button>
+  </div>
+
+   
+    
+  
+ </ion-content>

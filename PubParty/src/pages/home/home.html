@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <button [navPush]="addPartyModale" ion-button icon-right clear strong >
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-title>Home </ion-title>
+     
+      
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  
+    <ion-card *ngFor="let p of parties | async">
+  <ion-card-header>
+    <ion-avatar item-start>
+      <img src="">
+    </ion-avatar>
+   {{ p.PartyName }}
+  </ion-card-header>
+  <ion-card-content>
+   {{p.PartyDescription}}
+  </ion-card-content>
+</ion-card>
+  
+
+
+</ion-content>
